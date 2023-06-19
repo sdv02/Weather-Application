@@ -1,0 +1,30 @@
+.section_details{
+    float: left;
+    align-items: center;
+    justify-content:space-around;
+    display: flex;
+    border: none;
+    background-color: rgba(170, 167, 167, 0.612);
+}
+.card1{
+    padding-right: 15%;
+    border-right: 2px white solid;
+
+}
+.card2{
+    padding-right: 15%;
+    border-right: 2px white solid;
+
+}
+.sun{
+    float: left;
+    align-items: center;
+    justify-content:space-around;
+    display: flex;
+    border: none;
+    
+}
+.sunrise{
+    align-items: center;
+    justify-content: center;
+}
