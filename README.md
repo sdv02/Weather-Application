@@ -21,7 +21,7 @@ The following is required to run the project:
   <img src="https://github.com/sdv02/Weather-Application/assets/107821357/b03fd234-1067-447f-ab1f-6f64fa7ac54c" width=80% height=50%>
   <img src="https://github.com/sdv02/Weather-Application/assets/107821357/6334b1aa-45d2-4064-90fa-08ad3cddbfca" width=80% height=50%>
   <img src="https://github.com/sdv02/Weather-Application/assets/107821357/ee8618aa-e62f-481b-a095-58ab66a9a6be" width=80% height=50%>
-  <img src="https://github.com/sdv02/Weather-Application/assets/107821357/7f905448-e2f2-4f77-8af6-ac52cd1c8d64" width=30% height=70%>
+  <img src="https://github.com/sdv02/Weather-Application/assets/107821357/7f905448-e2f2-4f77-8af6-ac52cd1c8d64" width=30% height=80%>
 
   
 
