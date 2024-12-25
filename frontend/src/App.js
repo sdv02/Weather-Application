@@ -19,10 +19,10 @@ function App() {
     setWeatherData(weatherData);
      
    const  threshold=units=== 'metric'?'20':'60';
-   if(weatherData.temperature<=threshold) setbg(cold)
+   if(weatherData?.temperature<=threshold) setbg(cold)
    else setbg(hot)
 
-   const icon=weatherData.icon
+   const icon=weatherData?.icon
    //console.log(icon)
    const url= "http://openweathermap.org/img/wn/"+icon+"@2x.png"
   seticonurl(url);
@@ -52,31 +52,33 @@ function App() {
   return (
     <div className='app' style={{ backgroundImage: `url(${bg})`}}>
       <div className='overlay'>
-        {weather && (
+        {(
           <div className='container'>
             <div className='section section__search'>
               <input type='text' name='place' placeholder='Search city' onKeyDown={enterkeypressed} />
               <button onClick= { (e) =>handleUnitsClick(e)} > F </button>
             </div>
-            <div className='section section__temperature-icon'>
+            {weather && weather.cityName ?
+           <> <div className='section section__temperature-icon'>
               <div className='temperature'>
-                <h1>{weather.temperature}&deg;{units=== 'metric'? 'C' : 'F' }</h1><br />
-                <h3> {weather.cityName}, {weather.country.country}</h3>
+                <h1>{weather?.temperature}&deg;{units=== 'metric'? 'C' : 'F' }</h1><br />
+                <h3> {weather?.cityName}, {weather?.country?.country}</h3>
               </div>
+             
               <div className='icon'>
                 
                 <img src= {url} alt='icon'>
               </img>
-              <h3>{weather.detail}</h3><br />
+              <h3>{weather?.detail}</h3><br />
             </div>
           </div>
           <div className='section description'>
-              <h3>Feels like  {weather.feels_like}&deg;{units=== 'metric'? 'C' : 'F' } </h3><br />
-              <h3>{weather.description}</h3><br />
+              <h3>Feels like  {weather?.feels_like}&deg;{units=== 'metric'? 'C' : 'F' } </h3><br />
+              <h3>{weather?.description}</h3><br />
               <Details weather={weather} units={units} />
               
             </div>
-            
+            </>: <div style={{fontSize:30, fontWeight:600, color:'white', marginBottom:"45%"}}>{`Oops no data found for "${city}"`} </div>}
         </div>
         )}
         </div>
